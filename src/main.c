@@ -2,10 +2,16 @@
 #include "file_util.h"
 #include "embedded_controller.h"
 #include "extreme_cooling.h"
-#include <stdio.h>
+
 int main(const int argc, const char* argv[]) {
   if (isArgumentValid(argc, argv) != 0) {
     return -1;
+  }
+
+  const int command = getCommand(argv[1]);
+  if (command == HELP) {
+    showHelp();
+    return 0;
   }
 
   if (isExtremeCoolingSupported(SYSTEM_DMI_PATH_LINUX) != 0) {
@@ -15,10 +21,8 @@ int main(const int argc, const char* argv[]) {
   if (getPermissionToAccessEmbeddedControllerRegisters() != 0) {
     return -1;
   }
-  switch (getCommand(argv[1])) {
-    case HELP:
-      showHelp();
-      break;
+
+  switch (command) {
     case START:
       startExtremeCooling();
       break;
