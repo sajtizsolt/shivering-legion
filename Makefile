@@ -1,5 +1,5 @@
 VERSION=1
-SUBVERSION=0
+SUBVERSION=1
 
 COMPILER=gcc
 COMPILER_FLAGS=-Wall -Wextra -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wcast-align -Wstrict-prototypes -Wstrict-overflow=5 -Wwrite-strings -Waggregate-return -Wcast-qual -Wswitch-default -Wswitch-enum -Wconversion -Wunreachable-code
