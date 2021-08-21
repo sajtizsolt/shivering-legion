@@ -12,6 +12,9 @@ int main(const int argc, const char* argv[]) {
   if (command == HELP) {
     showHelp();
     return 0;
+  } else if (command == INFO) {
+    showSystemInfo(SYSTEM_DMI_PATH_LINUX);
+    return 0;
   }
 
   if (isExtremeCoolingSupported(SYSTEM_DMI_PATH_LINUX) != 0) {
