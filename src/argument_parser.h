@@ -3,6 +3,7 @@
 
 enum Command {
   HELP,
+  INFO,
   START,
   STOP
 };
@@ -10,5 +11,6 @@ enum Command {
 int isArgumentValid(const int argc, const char* argv[]);
 int getCommand(const char* argument);
 void showHelp(void);
+void showSystemInfo(const char* dmiPath);
 
 #endif /* ARGUMENT_PARSER_H */

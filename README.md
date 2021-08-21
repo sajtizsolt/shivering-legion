@@ -27,7 +27,7 @@ $ rm -rf shivering-legion
 To start using the application you should execute a simple command. You will need root privileges because the program will communicate with the embedded controller of your system.
 
 ```
-$ sudo shivering-legion [help|start|stop]
+$ sudo shivering-legion [help|info|start|stop]
 ```
 
 ## Acknowledgement
