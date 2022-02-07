@@ -17,9 +17,9 @@ backup=()
 options=()
 install=
 changelog=
-source=("$url/archive/refs/tags/$pkgname-$pkgver.tar.gz")
+source=("$url/archive/refs/tags/$pkgver.tar.gz")
 noextract=()
-sha256sums=('20619e6100fcad8e1dd3a3ca188bdd142862f7a2833ba29326a97af67e36847c')
+sha256sums=('d3e2884b44eae8ced801b099b9d47f5a1f7ff5a7fc39f3b5aa4bdf8b9c59e0dd')
 
 build() {
   cd "$pkgname-$pkgver"
