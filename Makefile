@@ -1,5 +1,5 @@
 VERSION=1
-SUBVERSION=1
+SUBVERSION=2
 
 COMPILER=gcc
 COMPILER_FLAGS=-Wall -Wextra -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wcast-align -Wstrict-prototypes -Wstrict-overflow=5 -Wwrite-strings -Waggregate-return -Wcast-qual -Wswitch-default -Wswitch-enum -Wconversion -Wunreachable-code
@@ -10,7 +10,7 @@ SOURCE_FILES=src/main.c src/argument_parser.c src/file_util.c src/embedded_contr
 
 all:
 	$(COMPILER) $(COMPILER_FLAGS) -o $(TARGET_EXECUTABLE) $(SOURCE_FILES)
-	sudo cp $(TARGET_EXECUTABLE) /usr/bin/
+	sudo cp $(TARGET_EXECUTABLE) $(DESTDIR)/usr/bin/
 
 clean:
 	$(RM) $(TARGET_EXECUTABLE)
