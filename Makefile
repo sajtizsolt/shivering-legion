@@ -6,7 +6,7 @@ COMPILER_FLAGS=-Wall -Wextra -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wca
 
 TARGET_EXECUTABLE=shivering-legion
 
-SOURCE_FILES=src/main.c src/argument_parser.c src/file_util.c src/embedded_controller.c src/extreme_cooling.c
+SOURCE_FILES=source/main.c source/argument_parser.c source/file_util.c source/embedded_controller.c source/extreme_cooling.c
 
 all:
 	compile

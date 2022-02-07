@@ -19,7 +19,7 @@ install=
 changelog=
 source=("$url/archive/refs/tags/$pkgver.tar.gz")
 noextract=()
-sha256sums=('59bcf0ccef75ca09f93a01b0b7e6a4b5fa846ecf4a19fa587c36b458a0f34b7e')
+sha256sums=('20619e6100fcad8e1dd3a3ca188bdd142862f7a2833ba29326a97af67e36847c')
 
 build() {
   cd "$pkgname-$pkgver"
