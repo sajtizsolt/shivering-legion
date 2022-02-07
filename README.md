@@ -4,6 +4,16 @@ Shivering Legion is a command line application written in C, which enables the E
 
 ## Installation
 
+### From AUR
+
+To install the application from AUR, just use you favourite package manager, for example `pacman` or `pamac`.
+
+```
+$ sudo pamac install shivering-legion
+```
+
+### From source code
+
 To install the application simply clone the source code and use `make`. Please note, that you will need root privileges to install, because the executable will be copied into your `/usr/bin` directory as well.
 
 ```
