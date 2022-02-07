@@ -19,7 +19,7 @@ install=
 changelog=
 source=("$url/archive/refs/tags/$pkgver.tar.gz")
 noextract=()
-sha256sums=('5fd3cadd64f387749d511399de3e85cbe1c51f36aedd7fcd72c1eca3b7dcec68')
+sha256sums=('59bcf0ccef75ca09f93a01b0b7e6a4b5fa846ecf4a19fa587c36b458a0f34b7e')
 
 build() {
   cd "$pkgname-$pkgver"
@@ -29,7 +29,8 @@ build() {
 
 package() {
   cd "$pkgname-$pkgver"
+  mkdir "$pkgdir"/usr
   mkdir "$pkgdir"/usr/bin
-  
+
   make DESTDIR="$pkgdir" install
 }
