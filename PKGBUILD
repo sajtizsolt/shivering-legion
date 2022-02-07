@@ -19,16 +19,17 @@ install=
 changelog=
 source=("$url/archive/refs/tags/$pkgver.tar.gz")
 noextract=()
-md5sums=()
+sha256sums=("a44553c87e249a044328bc7a01efbeb435106344b0b8d406f22e7fdd83d5ca17")
 
 build() {
   cd "$pkgname-$pkgver"
 
-  make
+  make compile
 }
 
 package() {
   cd "$pkgname-$pkgver"
-
+  mkdir "$pkgdir"/usr/bin
+  
   make DESTDIR="$pkgdir" install
 }

@@ -9,9 +9,15 @@ TARGET_EXECUTABLE=shivering-legion
 SOURCE_FILES=src/main.c src/argument_parser.c src/file_util.c src/embedded_controller.c src/extreme_cooling.c
 
 all:
-	$(COMPILER) $(COMPILER_FLAGS) -o $(TARGET_EXECUTABLE) $(SOURCE_FILES)
-	sudo cp $(TARGET_EXECUTABLE) $(DESTDIR)/usr/bin/
+	compile
+	install
 
 clean:
 	$(RM) $(TARGET_EXECUTABLE)
-	sudo $(RM) /usr/bin/$(TARGET_EXECUTABLE)
+	sudo $(RM) $(DESTDIR)/usr/bin/$(TARGET_EXECUTABLE)
+
+compile:
+	$(COMPILER) $(COMPILER_FLAGS) -o $(TARGET_EXECUTABLE) $(SOURCE_FILES)
+
+install:
+	sudo cp $(TARGET_EXECUTABLE) $(DESTDIR)/usr/bin/
